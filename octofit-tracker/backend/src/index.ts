@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import app from './app.js'
-import { connectDatabase } from './db.js'
+import { connectDatabase } from './config/database.js'
 
 const port = Number(process.env.PORT ?? 8000)
 const codespaceName = process.env.CODESPACE_NAME

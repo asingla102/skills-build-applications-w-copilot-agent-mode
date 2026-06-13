@@ -1,11 +1,13 @@
 import 'dotenv/config'
 import mongoose from 'mongoose'
-import { connectDatabase } from './db.js'
+import { connectDatabase } from './config/database.js'
 import { Activity } from './models/activity.js'
 import { LeaderboardEntry } from './models/leaderboard.js'
 import { Team } from './models/team.js'
 import { User } from './models/user.js'
 import { Workout } from './models/workout.js'
+
+// Seed the octofit_db database with test data.
 
 async function seed() {
   await connectDatabase()
