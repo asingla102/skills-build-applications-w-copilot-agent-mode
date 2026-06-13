@@ -97,7 +97,7 @@ jobs:
       # END: Check practical exercise
 
       - name: Fail job if not all checks passed
-        if: contains(steps.*.outcome, 'failure')
+        if: ${{ steps.check-codespace-name.outcome == 'failure' || steps.check-codespace-url.outcome == 'failure' }}
         run: exit 1
 
   post_next_step_content:
